@@ -1,0 +1,42 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Nueva Solicitud</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content fullscreen>
+  <!-- <form onsubmit="processForm(event)"> -->
+    <ion-list lines="full" class="ion-no-margin ion-no-padding">
+
+      <ion-item>
+        <ion-label>Team Leader: * </ion-label>
+        <ion-select interface="popover" [(ngModel)]="fkUser" (ionChange)="onSelect()">
+            <ion-option *ngFor="let leader of team_leaders" [value]="leader.id">
+              {{ leader.name }} {{ leader.paterno }}
+            </ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>OT * </ion-label>
+        <ion-input [(ngModel)]="ot" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Caja Chica *</ion-label>
+        <ion-input [(ngModel)]="monto" type="number"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Observaciones</ion-label>
+        <ion-textarea [(ngModel)]="observaciones"></ion-textarea>
+      </ion-item>
+    </ion-list>
+
+    <button ion-button large color="secondary" (click)="cancelar()">Cancelar</button>
+    <button ion-button large color="danger" (click)="generarSolicitud()">Generar</button> 
+
+  <!-- </form> -->
+</ion-content>

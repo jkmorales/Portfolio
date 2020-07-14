@@ -1,0 +1,48 @@
+
+<ion-header>
+    <ion-navbar>
+        <ion-item>
+            <ion-avatar item-start>
+              <img src="../../assets/imgs/default.png">
+            </ion-avatar>
+            <h2>{{ provider.user_name }} {{ provider.paterno }}</h2>
+            <p>{{ provider.perfil }}</p>
+            <!-- <button ion-button outline item-end icon-end  (click)="logout()">
+                <ion-icon color="danger" name="md-close"></ion-icon>    
+            </button> -->
+            <ion-icon color="danger" name="md-log-out" item-end (click)="logout()"></ion-icon>
+        </ion-item>
+    </ion-navbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-12 *ngIf="solicitudes.length != 0 "><h1>Solicitudes</h1></ion-col>
+        </ion-row>
+        <ion-row justify-content-around>
+          <ion-list>
+            <ion-item *ngFor="let solicitud of solicitudes">
+                <h1> ${{ solicitud.monto }} </h1>
+              <p>  {{ solicitud.creada }} </p>
+              
+              <ion-icon *ngIf="solicitud.pkRecordStatus == 4" color="generada" name="md-create" item-end>
+                  <p>{{solicitud.recordStatus}}</p>
+              </ion-icon>
+              <ion-icon *ngIf="solicitud.pkRecordStatus == 5" color="danger" name="thumbs-down" item-end>
+                  <p>{{solicitud.recordStatus}}</p>
+              </ion-icon>
+              <ion-icon *ngIf="solicitud.pkRecordStatus == 6" color="primary" name="thumbs-up" item-end>
+                  <p>{{solicitud.recordStatus}}</p>
+              </ion-icon>
+              <ion-icon *ngIf="solicitud.pkRecordStatus == 7" color="secondary" name="logo-usd" item-end>
+                  <p>{{solicitud.recordStatus}}</p>
+              </ion-icon>
+            </ion-item>
+          </ion-list>
+        </ion-row>
+      </ion-grid>
+    </ion-content>

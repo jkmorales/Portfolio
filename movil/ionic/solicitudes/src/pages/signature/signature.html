@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar >
+    <ion-title> {{solicitud.name}} {{solicitud.paterno}} - ${{solicitud.monto}} </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<signature-pad [options]="signaturePadOptions"  id="signatureCanvas"></signature-pad>
+<ion-grid>
+  <ion-row>
+    <ion-col col-4>
+<button ion-button full color="danger" (click)="drawCancel()">Cancelar</button>
+    </ion-col>
+    <ion-col col-4>
+<button ion-button full color="light" (click)="drawClear()">Limpiar</button>
+    </ion-col>
+    <ion-col col-4>
+<button ion-button full color="secondary" (click)="drawComplete()">Firmar</button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>

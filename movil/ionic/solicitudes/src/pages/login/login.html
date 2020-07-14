@@ -1,0 +1,43 @@
+<ion-content id="login">
+  <ion-grid>
+
+    <ion-row>
+      <ion-col>
+        <br>
+        <h1>INATEL</h1>
+        <br>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+          <ion-item>
+            <ion-input type="text" [(ngModel)]="usser" name="usser" placeholder="Usuario"></ion-input>
+          </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-input type="password" [(ngModel)]="password" name="password" placeholder="Contraseña"></ion-input>
+          </ion-item>
+        </ion-col>
+    </ion-row>
+
+    <ion-row><ion-col><br><br></ion-col></ion-row>
+
+    <ion-row class="btnInicio">
+        <ion-col> 
+          <button ion-button round color="secondary" (click)="login(usser,password)">Iniciar Sesión</button>
+        </ion-col>
+    </ion-row>
+
+    <ion-row id="version">
+      <ion-col >
+        <span>v. Berlín</span>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

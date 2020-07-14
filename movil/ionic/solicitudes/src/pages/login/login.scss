@@ -1,0 +1,43 @@
+page-login {
+    
+    #login{
+        background-color: transparent;
+        background-image: url("../../assets/imgs/antena.jpg");
+        background-repeat:no-repeat;
+        background-position:center center;
+        background-attachment:fixed;
+        -o-background-size: 100% 100%, auto;
+        -moz-background-size: 100% 100%, auto;
+        -webkit-background-size: 100% 100%, auto;
+        background-size: 100% 100%, auto;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    p{
+        color: blue;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .text-input {
+        text-align: center;
+    }
+
+    .btnInicio{
+        text-align: center;
+    }
+
+    #version{
+        margin-top: 18em;
+        margin-left: 1em;
+        text-align: left;
+        color: black;
+        font-family: sans-serif;
+        font-size: medium;
+        font-style: normal;
+        font-weight: bold;
+    }
+}

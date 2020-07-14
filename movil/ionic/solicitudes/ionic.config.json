@@ -1,0 +1,7 @@
+{
+  "name": "solicitudes",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

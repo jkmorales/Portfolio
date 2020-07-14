@@ -1,0 +1,12 @@
+<ion-menu [content]="content">
+
+<ion-content padding>
+    <ion-list>
+        <ion-item menuClose detail-none (click)="logout()">Cerrar Sesión</ion-item>
+        <ion-item menuClose detail-none (click)="historial()">Historial</ion-item>
+        <ion-item menuClose detail-none>Cerrar Menú</ion-item>
+    </ion-list>
+</ion-content>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content></ion-nav>
